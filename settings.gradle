@@ -1,0 +1,9 @@
+rootProject.name = 'treinamento'
+include 'treinamento-app'
+findProject(':treinamento-app')?.name = 'app'
+include 'treinamento-contract'
+findProject(':treinamento-contract')?.name = 'contract'
+include 'treinamento-impl'
+findProject(':treinamento-impl')?.name = 'impl'
+include 'main'
+

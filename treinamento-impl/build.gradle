@@ -1,0 +1,7 @@
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile(dimedServicesDependencies.persistence)
+    compile files('lib/ojdbc6.jar')
+    compile('org.apache.httpcomponents:httpclient:4.5')
+    compile('com.jason-goodwin:better-monads:0.4.0')
+}

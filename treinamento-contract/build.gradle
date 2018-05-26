@@ -1,0 +1,5 @@
+dependencies {
+    compile project(":treinamento-impl")
+    compile(dimedServicesDependencies.contract)
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.5.2")
+}
