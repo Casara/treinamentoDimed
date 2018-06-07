@@ -7,7 +7,7 @@ import br.com.dimed.arch.DimedServicesRunner;
 
 @EnableAutoConfiguration
 @EnableScheduling
-@ComponentScan(basePackages = "br.com.dimed")
+@ComponentScan(basePackages = "br.com.treinamento")
 public class Application {
 
     public static void main(String[] args) {

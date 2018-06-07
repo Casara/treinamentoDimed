@@ -1,4 +1,3 @@
 include 'treinamento-app'
 include 'treinamento-contract'
 include 'treinamento-impl'
-
