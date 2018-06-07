@@ -6,18 +6,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class Usuario {
-    private Long id;
+    private Integer id;
 
     @NotEmpty
     private String nome;
 
     @NotEmpty
-    private String dataNascimento; // java.time.LocalDateTime
+    private LocalDateTime dataNascimento;
 
     @NotEmpty
     private String cpf;

@@ -10,6 +10,7 @@ public class UsuarioBinder {
 
     public static UsuarioFunctionalModel bindTo(Usuario usuario) {
         return UsuarioFunctionalModel.builder()
+                .id(usuario.getId())
                 .nome(usuario.getNome())
                 .dataNascimento(usuario.getDataNascimento())
                 .endereco(usuario.getEndereco())

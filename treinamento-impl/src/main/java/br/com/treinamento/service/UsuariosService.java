@@ -15,7 +15,7 @@ public class UsuariosService {
         return usuariosData.selectUsuarios();
     }
 
-    public UsuarioFunctionalModel getUsuario(Long id) {
+    public UsuarioFunctionalModel getUsuario(int id) {
         return usuariosData.selectUsuario(id);
     }
 
@@ -27,7 +27,7 @@ public class UsuariosService {
         return usuariosData.updateUsuario(usuarioFunctionalModel);
     }
 
-    public void deleteUsuario(Long id) {
+    public void deleteUsuario(int id) {
         usuariosData.deleteUsuario(id);
     }
 }

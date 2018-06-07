@@ -3,22 +3,20 @@ package br.com.treinamento.contract.facade;
 import br.com.treinamento.contract.binder.UsuarioBinder;
 import br.com.treinamento.contract.model.Usuario;
 import br.com.treinamento.service.UsuariosService;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 
+@AllArgsConstructor
 public class UsuarioFacade {
 
     private UsuariosService usuariosService;
-
-    public  UsuarioFacade(UsuariosService usuariosService) {
-        this.usuariosService = usuariosService;
-    }
 
     public List<Usuario> listUsuarios() {
         return UsuarioBinder.bindFrom(usuariosService.getUsuarios());
     }
 
-    public Usuario getUsuario(Long id) {
+    public Usuario getUsuario(int id) {
         return UsuarioBinder.bindFrom(usuariosService.getUsuario(id));
     }
 
@@ -30,7 +28,7 @@ public class UsuarioFacade {
         return UsuarioBinder.bindFrom(usuariosService.updateUsuario(UsuarioBinder.bindTo(usuario)));
     }
 
-    public void deleteUsuario(Long id) {
+    public void deleteUsuario(int id) {
         usuariosService.deleteUsuario(id);
     }
 }

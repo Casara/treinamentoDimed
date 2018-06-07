@@ -5,14 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class UsuarioFunctionalModel {
-    private Long id;
+    private int id;
     private String nome;
-    private String dataNascimento; // java.time.LocalDateTime
+    private LocalDateTime dataNascimento;
     private String cpf;
     private String endereco;
 }
