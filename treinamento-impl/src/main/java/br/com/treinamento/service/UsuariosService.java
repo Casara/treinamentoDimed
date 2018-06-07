@@ -11,10 +11,6 @@ public class UsuariosService {
 
     private UsuariosData usuariosData;
 
-    public UsuariosService(UsuariosData usuariosData) {
-        this.usuariosData = usuariosData;
-    }
-
     public List<UsuarioFunctionalModel> getUsuarios() {
         return usuariosData.selectUsuarios();
     }
