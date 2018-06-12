@@ -9,7 +9,6 @@ import br.com.dimed.arch.DimedServicesRunner;
 @EnableScheduling
 @ComponentScan(basePackages = "br.com.treinamento")
 public class Application {
-
     public static void main(String[] args) {
         new DimedServicesRunner(Application.class).run(args);
     }

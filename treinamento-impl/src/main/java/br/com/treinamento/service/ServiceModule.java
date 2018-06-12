@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ServiceModule {
-
     @Bean
     public UsuariosService usuariosService(UsuariosData usuariosData) {
         return new UsuariosService(usuariosData);

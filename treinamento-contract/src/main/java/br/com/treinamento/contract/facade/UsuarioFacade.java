@@ -9,7 +9,6 @@ import java.util.List;
 
 @AllArgsConstructor
 public class UsuarioFacade {
-
     private UsuariosService usuariosService;
 
     public List<Usuario> listUsuarios() {
@@ -20,12 +19,12 @@ public class UsuarioFacade {
         return UsuarioBinder.bindFrom(usuariosService.getUsuario(id));
     }
 
-    public Usuario insertUsuario(Usuario usuario) {
-        return UsuarioBinder.bindFrom(usuariosService.insertUsuario(UsuarioBinder.bindTo(usuario)));
+    public int insertUsuario(Usuario usuario) {
+        return usuariosService.insertUsuario(UsuarioBinder.bindTo(usuario));
     }
 
-    public Usuario updateUsuario(Usuario usuario) {
-        return UsuarioBinder.bindFrom(usuariosService.updateUsuario(UsuarioBinder.bindTo(usuario)));
+    public void updateUsuario(Usuario usuario) {
+        usuariosService.updateUsuario(UsuarioBinder.bindTo(usuario));
     }
 
     public void deleteUsuario(int id) {

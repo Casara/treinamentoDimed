@@ -5,8 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.NotEmpty;
-
-import java.time.LocalDateTime;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 @AllArgsConstructor
@@ -19,7 +18,8 @@ public class Usuario {
     private String nome;
 
     @NotEmpty
-    private LocalDateTime dataNascimento;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private String dataNascimento;
 
     @NotEmpty
     private String cpf;

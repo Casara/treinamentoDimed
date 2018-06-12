@@ -21,7 +21,6 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class RestEndpoint {
-
     @Autowired
     UsuarioFacade usuarioFacade;
 
@@ -51,7 +50,7 @@ public class RestEndpoint {
     @ApiResponses({@ApiResponse(code = 201, message = "Usuário cadastrado")})
     public Response createUsuario(@ApiParam(value = "Novo usuário", required = true) @NotNull @Valid Usuario usuario) {
         logger.info("Creating user {} - {}", usuario.getId(), usuario.getNome());
-        String addedId = String.valueOf(usuarioFacade.insertUsuario(usuario).getId());
+        String addedId = String.valueOf(usuarioFacade.insertUsuario(usuario));
         return Response.created(uriInfo.getAbsolutePathBuilder().path(addedId).build()).build();
     }
 

@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SwaggerConfig {
-
     @Bean
     public BeanConfig beanConfig() {
         BeanConfig beanConfig = new BeanConfig();
