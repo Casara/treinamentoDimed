@@ -16,8 +16,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
 
-@Path("/treinamento")
-@Api(value = "treinamento", description = "Service Treinamento", produces = MediaType.APPLICATION_JSON)
+@Path("/usuarios")
+@Api(value = "usuarios", description = "Service Treinamento", produces = MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class RestEndpoint {
@@ -30,21 +30,19 @@ public class RestEndpoint {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @GET
-    @Path("/usuarios")
     @ApiOperation(value = "Lista os usuários cadastrados", response = Usuario.class, responseContainer = "List")
     public List<Usuario> listUsuarios() {
         return usuarioFacade.listUsuarios();
     }
 
     @GET
-    @Path("/usuarios/{id}")
+    @Path("/{id}")
     @ApiOperation(value = "Busca usuário pelo identificador", response = Usuario.class)
     public Usuario getUsuario(@ApiParam(value = "Identificador do usuário", required = true) @PathParam("id") int id) {
         return usuarioFacade.getUsuario(id);
     }
 
     @POST
-    @Path("/usuarios")
     @Consumes(MediaType.APPLICATION_JSON)
     @ApiOperation(value = "Cadastra um novo usuário")
     @ApiResponses({@ApiResponse(code = 201, message = "Usuário cadastrado")})
@@ -55,7 +53,7 @@ public class RestEndpoint {
     }
 
     @PUT
-    @Path("/usuarios/{id}")
+    @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @ApiOperation(value = "Atualiza o cadastro de um usuário")
     @ApiResponses({@ApiResponse(code = 203, message = "Usuário atualizado")})
@@ -69,7 +67,7 @@ public class RestEndpoint {
     }
 
     @DELETE
-    @Path("/usuarios/{id}")
+    @Path("/{id}")
     @ApiOperation(value = "Exclui o cadastro de um usuário")
     @ApiResponses({@ApiResponse(code = 204, message = "Usuário excluído")})
     public Response deleteUser(@ApiParam(value = "Identificador do usuário", required = true) @PathParam("id") int id) {

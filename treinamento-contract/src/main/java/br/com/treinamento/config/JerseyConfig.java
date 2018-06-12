@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.ws.rs.ApplicationPath;
 
 @Component
-@Api("/treinamento")
+@Api("/usuarios")
 @ApplicationPath("treinamento")
 public class JerseyConfig extends DefaulJerseyConfig {
     public JerseyConfig() {

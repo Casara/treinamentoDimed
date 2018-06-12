@@ -5,7 +5,6 @@ import br.com.dimed.arch.jersey.exceptions.ApiException;
 import javax.ws.rs.core.Response;
 
 public class MuitosResultados extends ApiException {
-
     final static String DEFAULT_MESSAGE = "Muitos registros encontrados para essa requisição.";
 
     public MuitosResultados() {

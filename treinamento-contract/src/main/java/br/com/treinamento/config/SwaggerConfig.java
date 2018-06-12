@@ -11,7 +11,7 @@ public class SwaggerConfig {
         BeanConfig beanConfig = new BeanConfig();
         beanConfig.setTitle("Documentação do serviço de treinamento");
         beanConfig.setVersion("1.0.0");
-        beanConfig.setBasePath("/treinamento");
+        beanConfig.setBasePath("/usuarios");
         beanConfig.setResourcePackage("br.com.treinamento.contract");
         beanConfig.setScan(true);
         return beanConfig;

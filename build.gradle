@@ -7,5 +7,4 @@ buildscript {
     }
 }
 
-
 apply plugin: 'br.com.dimed.arch.buildconfig'
