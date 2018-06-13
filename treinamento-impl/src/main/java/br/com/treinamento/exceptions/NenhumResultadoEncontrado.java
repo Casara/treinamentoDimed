@@ -5,7 +5,8 @@ import br.com.dimed.arch.jersey.exceptions.ApiException;
 import javax.ws.rs.core.Response;
 
 public class NenhumResultadoEncontrado extends ApiException {
-    final static String DEFAULT_MESSAGE = "Nenhum resultado encontrado.";
+
+    private static final String DEFAULT_MESSAGE = "Nenhum resultado encontrado.";
 
     public NenhumResultadoEncontrado() {
         super(DEFAULT_MESSAGE);
@@ -30,4 +31,5 @@ public class NenhumResultadoEncontrado extends ApiException {
     public Response.Status getHttpStatus() {
         return Response.Status.NOT_FOUND;
     }
+
 }

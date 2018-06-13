@@ -10,6 +10,7 @@ import java.time.ZonedDateTime;
 import java.util.GregorianCalendar;
 
 public class LocalDateTimeTypeHandler extends BaseTypeHandler<LocalDateTime> {
+
     @Override
     public void setNonNullParameter(PreparedStatement ps, int i, LocalDateTime parameter, JdbcType jdbcType) throws SQLException {
         ps.setTimestamp(
@@ -49,4 +50,5 @@ public class LocalDateTimeTypeHandler extends BaseTypeHandler<LocalDateTime> {
         }
         return null;
     }
+
 }

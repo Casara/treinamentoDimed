@@ -13,6 +13,7 @@ import java.util.List;
 
 @AllArgsConstructor
 public class UsuariosService {
+
     private UsuariosData usuariosData;
 
     public List<UsuarioFuncionalModel> getUsuarios() {
@@ -46,4 +47,5 @@ public class UsuariosService {
     public void deleteUsuario(int id) {
         usuariosData.deleteUsuario(id);
     }
+
 }

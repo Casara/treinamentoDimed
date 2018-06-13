@@ -5,7 +5,8 @@ import br.com.dimed.arch.jersey.exceptions.ApiException;
 import javax.ws.rs.core.Response;
 
 public class ChavePrimariaDuplicada extends ApiException {
-    final static String DEFAULT_MESSAGE = "Este valor já está em uso por outro registro.";
+
+    private static final String DEFAULT_MESSAGE = "Este valor já está em uso por outro registro.";
 
     public ChavePrimariaDuplicada() {
         super(DEFAULT_MESSAGE);
@@ -30,4 +31,5 @@ public class ChavePrimariaDuplicada extends ApiException {
     public Response.Status getHttpStatus() {
         return Response.Status.BAD_REQUEST;
     }
+
 }

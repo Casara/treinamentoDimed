@@ -9,6 +9,7 @@ import java.util.List;
 
 @AllArgsConstructor
 public class UsuarioFacade {
+
     private UsuariosService usuariosService;
 
     public List<Usuario> listUsuarios() {
@@ -30,4 +31,5 @@ public class UsuarioFacade {
     public void deleteUsuario(int id) {
         usuariosService.deleteUsuario(id);
     }
+
 }

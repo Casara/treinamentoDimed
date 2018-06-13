@@ -5,7 +5,8 @@ import br.com.dimed.arch.jersey.exceptions.ApiException;
 import javax.ws.rs.core.Response;
 
 public class MuitosResultados extends ApiException {
-    final static String DEFAULT_MESSAGE = "Muitos registros encontrados para essa requisição.";
+
+    private static final String DEFAULT_MESSAGE = "Muitos registros encontrados para essa requisição.";
 
     public MuitosResultados() {
         super(DEFAULT_MESSAGE);
@@ -30,4 +31,5 @@ public class MuitosResultados extends ApiException {
     public Response.Status getHttpStatus() {
         return Response.Status.BAD_REQUEST;
     }
+
 }

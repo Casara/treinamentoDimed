@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class UsuarioBinder {
+
     public static UsuarioFuncionalModel bindTo(Usuario usuario) {
         return UsuarioFuncionalModel.builder()
                 .id(usuario.getId())
@@ -32,4 +33,5 @@ public class UsuarioBinder {
     public static List<Usuario> bindFrom(List<UsuarioFuncionalModel> usuarios) {
         return usuarios.stream().map(UsuarioBinder::bindFrom).collect(Collectors.toList());
     }
+
 }

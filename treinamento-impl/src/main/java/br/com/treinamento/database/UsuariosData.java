@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 public interface UsuariosData {
+
     @Select("SELECT * FROM USUARIOS")
     @Results(value = {
             @Result(property = "id", column = "ID"),
@@ -46,4 +47,5 @@ public interface UsuariosData {
 
     @Delete("DELETE FROM USUARIOS WHERE ID = #{id}")
     void deleteUsuario(int id);
+
 }

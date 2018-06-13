@@ -12,6 +12,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @NoArgsConstructor
 @Builder
 public class Usuario {
+
     private Integer id;
 
     @NotEmpty
@@ -26,4 +27,5 @@ public class Usuario {
 
     @NotEmpty
     private String endereco;
+
 }

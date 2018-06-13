@@ -9,9 +9,15 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class UsuarioFuncionalModel {
+
     private int id;
+
     private String nome;
+
     private LocalDateTime dataNascimento;
+
     private String cpf;
+
     private String endereco;
+
 }
